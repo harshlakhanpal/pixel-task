@@ -27,5 +27,11 @@ export const typeDefs = gql`
     addUser(name: String!, email: String!): User!
     updateUser(id: ID!, name: String, email: String): User!
     addDogOwner(dogId: ID!, userId: ID!): Dog!
+    addDog(
+      name: String!
+      breed: String!
+      dateOfBirth: String!
+      owners: [ID!]
+    ): Dog!
   }
 `;
